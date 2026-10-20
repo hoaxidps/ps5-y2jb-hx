@@ -5,7 +5,7 @@
     of the MIT license.  See the LICENSE file for details.
 */
 
-const autoloader_version = "@@VERSION@@";
+const autoloader_version = "v1.0.0-dev-20261013060605";
 
 
 
@@ -172,18 +172,18 @@ function trigger() {
         autoloader_ui.style.transform = "scale(" + scale + ")";
         autoloader_ui.style.transformOrigin = "top left";
         autoloader_ui.style.zIndex = "9999";
-        autoloader_ui.style.backgroundColor = "#272727";
+        autoloader_ui.style.backgroundColor = "#131313";
         autoloader_ui.style.border = "1px solid black";
         autoloader_ui.style.padding = "5px";
         autoloader_ui.style.fontFamily = "Arial, sans-serif";
         autoloader_ui.style.fontSize = "8px";
 
         const title = document.createElement("div");
-        title.textContent = "Y2JB Autoloader";
+        title.textContent = "Now play as no limits.";
         title.style.fontFamily = "monospace";
         title.style.textAlign = "center";
         title.style.fontWeight = "bold";
-        title.style.color = "#ccc";
+        title.style.color = "#4D4DFF";
         title.style.padding = "10px";
         title.style.borderRadius = "8px";
         title.style.marginBottom = "5px";
@@ -197,12 +197,12 @@ function trigger() {
         logWrapper.style.position = "relative";
         logWrapper.style.margin = "20px auto 0 auto";
         logWrapper.style.padding = "0px";
-        logWrapper.style.color = "#ccc";
+        logWrapper.style.color = "#333333";
         logWrapper.style.backgroundColor = "#000";
         logWrapper.style.fontFamily = "monospace";
         logWrapper.style.fontSize = "28px";
         logWrapper.style.overflow = "hidden";
-        logWrapper.style.border = "2px solid red";
+        logWrapper.style.border = "2px solid #4D4Dff";
         logWrapper.style.borderRadius = "8px";
         logWrapper.style.overflowY = "scroll";
         logWrapper.id = "logWrapper";
@@ -218,8 +218,8 @@ function trigger() {
         const progressBarContainer = document.createElement("div");
         progressBarContainer.style.width = "60%";
         progressBarContainer.style.height = "100px";
-        progressBarContainer.style.backgroundColor = "#202020";
-        progressBarContainer.style.border = "2px solid red";
+        progressBarContainer.style.backgroundColor = "#131313";
+        progressBarContainer.style.border = "2px solid #4D4DFF";
         progressBarContainer.style.borderRadius = "16px";
         progressBarContainer.style.margin = "0 auto";
         progressBarContainer.style.overflow = "hidden";
@@ -234,7 +234,7 @@ function trigger() {
         progressLabel.style.top = "50%";
         progressLabel.style.left = "50%";
         progressLabel.style.transform = "translate(-50%, -50%)";
-        progressLabel.style.color = "#fff";
+        progressLabel.style.color = "#00ff15";
         progressLabel.style.fontSize = "42px";
         progressLabel.style.fontWeight = "bold";
         progressLabel.style.zIndex = "1";
@@ -244,7 +244,7 @@ function trigger() {
         progressBar.id = "progressBar";
         progressBar.style.width = "100%";
         progressBar.style.height = "100%";
-        progressBar.style.backgroundColor = "#aa0000";
+        progressBar.style.backgroundColor = "#040008";
         progressBar.style.transformOrigin = "left";
         progressBar.style.transform = "scaleX(0)";
         progressBar.style.transition = "transform 0.5s ease-in-out";
@@ -273,13 +273,13 @@ function trigger() {
         if (logContainer) {
             const logEntry = document.createElement("div");
             if (type === "error") {
-                logEntry.style.color = "red";
+                logEntry.style.color = "#ff0000";
             } else if (type === "success") {
-                logEntry.style.color = "lightgreen";
+                logEntry.style.color = "#ffc400";
             } else if (type === "warning") {
-                logEntry.style.color = "yellow";
+                logEntry.style.color = "#00ff15";
             } else {
-                logEntry.style.color = "#ccc";
+                logEntry.style.color = "#333333";
             }
             logEntry.textContent = message;
             logContainer.appendChild(logEntry);
@@ -1196,7 +1196,7 @@ function trigger() {
         let exploit_success = false;
 
         const has_net = has_network_interface();
-        const relapse_supported = compare_version(FW_VERSION, "7.00") >= 0 &&
+        const relapse_supported = compare_version(FW_VERSION, "8.00") >= 0 &&
                                   compare_version(FW_VERSION, "13.60") <= 0 &&
                                   FW_VERSION !== "9.05" &&
                                   FW_VERSION !== "11.40";
